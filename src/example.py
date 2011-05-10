@@ -1,8 +1,8 @@
 from interface import interface, implements, method
 
 class comestible(interface):
-    eat = method()
-    buy_from = method()
+    eat = method(["self"])
+    buy_from = method(["self", "supermarket"])
 
 
 @implements(comestible)
@@ -11,5 +11,5 @@ class hamburger(object):
     def eat(self):
         pass
 
-    def buy_from(self):
+    def buy_from(self, supermarket):
         pass
