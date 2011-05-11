@@ -4,8 +4,9 @@ class interface(object):
     pass
 
 class method(object):
-    def __init__(self, args=None):
+    def __init__(self, args=None, varargs=None):
         self.args = args or []
+        self.varargs = varargs
 
 class implements(object):
     
@@ -20,6 +21,7 @@ class implements(object):
             iface_spec = self._attribute(self.interface, each)
             impl_spec = getargspec(self._attribute(clazz, each))
             assert iface_spec.args == impl_spec.args
+            assert iface_spec.varargs == impl_spec.varargs
             
 
     def _is_method(self, name):
