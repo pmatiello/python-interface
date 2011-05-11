@@ -1,10 +1,10 @@
 from interface import interface, implements, method
 
 class comestible(interface):
-    eat = method(["self"])
-    buy_from = method(["self", "supermarket"])
-    mix_with = method(["self"], varargs="ingredients")
-    cook_with = method(["self"], keywords="ingredients")
+    eat = method(['self'])
+    buy_from = method(['self', 'supermarket'])
+    mix_with = method(['self'], varargs='ingredients')
+    cook_with = method(['self'], keywords='ingredients')
 
 
 @implements(comestible)
