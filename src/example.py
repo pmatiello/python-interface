@@ -1,4 +1,4 @@
-from interface import interface, implements, method, InterfaceNotImplemented
+from interface import interface, implements, method
 
 
 class comestible(interface):
