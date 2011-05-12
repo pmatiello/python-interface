@@ -1,4 +1,4 @@
-from interface import interface, implements, method
+from interface import interface, implements, method, InterfaceNotImplemented
 
 
 class comestible(interface):
@@ -26,3 +26,5 @@ class hamburger(object):
     
     def cook(self, temperature=100):
         pass
+
+print hamburger()
